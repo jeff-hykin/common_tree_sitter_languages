@@ -7,17 +7,17 @@ import { FileSystem } from "https://deno.land/x/quickr@0.6.30/main/file_system.j
 import { capitalize, indent, toCamelCase, digitsToEnglishArray, toPascalCase, toKebabCase, toSnakeCase, toScreamingtoKebabCase, toScreamingtoSnakeCase, toRepresentation, toString } from "https://deno.land/x/good@0.7.8/string.js"
 import { Console, cyan, white, yellow, green, red } from "https://deno.land/x/quickr@0.6.30/main/console.js"
 import { run, Stdout, returnAsString } from "https://deno.land/x/quickr@0.6.30/main/run.js"
+import { binaryify } from "https://deno.land/x/binaryify@2.2.0.2/tools.js"
 
 Console.env.NO_COLOR = "true"
-await FileSystem.cd("./main")
-for (const each of await FileSystem.listFileItemsIn("./raw_code")) {
+await FileSystem.cd(FileSystem.thisFolder)
+for (const each of await FileSystem.listFileItemsIn("./main")) {
     if (each.extension == ".wasm") {
-        const output = await run`binaryify -- ${`./raw_code/${each.name}.wasm`} ${Stdout(returnAsString)}`
-        console.log(`import ${each.name} from "https://deno.land/x/common_tree_sitter_languages@1.0.0.0/main/${each.name}.js"`)
-        FileSystem.write({
-            data: output.replace(/\n\/\/.+/g, "").replace(/const.+=/g, 'export default'),
-            path: `${each.name}.js`,
+        await binaryify({
+            pathToBinary: each.path,
+            pathToBinarified: `./main/${each.name}.js`,
         })
+        console.log(`import ${each.name} from "https://deno.land/x/common_tree_sitter_languages@1.0.0.0/main/${each.name}.js"`)
     }
 }
 
