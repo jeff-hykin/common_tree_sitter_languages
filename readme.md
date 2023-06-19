@@ -6,7 +6,7 @@ Its a central place for tree sitter wasm files that can be imported synchonously
 
 ```js
 import javascript from "https://deno.land/x/common_tree_sitter_languages@1.0.0.0/main/javascript.js"
-import { parserFromWasm } from "https://deno.land/x/deno_tree_sitter@1.0.0.0/main.js"
+import { parserFromWasm } from "https://deno.land/x/deno_tree_sitter@0.0.4/main.js"
 
 const javascriptParser = (await parserFromWasm(javascript))
 javascriptParser.parse("let a = 10;")
