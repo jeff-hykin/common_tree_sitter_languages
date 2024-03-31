@@ -33,3 +33,11 @@ import cpp from "https://deno.land/x/common_tree_sitter_languages@1.0.0.3/main/c
 import gitignore from "https://deno.land/x/common_tree_sitter_languages@1.0.0.3/main/gitignore.js"
 import treeSitterQuery from "https://deno.land/x/common_tree_sitter_languages@1.0.0.3/main/tree-sitter-query.js"
 ```
+
+
+### How to add a new language
+
+- If they've got a tree sitter repo, go there
+- `npm install tree-sitter-cli`
+- `npx tree-sitter build-wasm`
+- thats generally it!
