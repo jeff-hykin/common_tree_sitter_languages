@@ -40,5 +40,5 @@ import treeSitterQuery from "https://deno.land/x/common_tree_sitter_languages@1.
 
 - If they've got a tree sitter repo, go there
 - `npm install tree-sitter-cli`
-- `npx tree-sitter build-wasm`
+- `npx tree-sitter build-wasm` or `tree-sitter build --wasm --output 'out.wasm'`
 - thats generally it!
