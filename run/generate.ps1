@@ -17,7 +17,7 @@ for (const each of await FileSystem.listFileItemsIn("./main")) {
             pathToBinary: each.path,
             pathToBinarified: `./main/${each.name}.js`,
         })
-        console.log(`import ${toCamelCase(each.name)} from "https://deno.land/x/common_tree_sitter_languages@1.1.0.0/main/${each.name}.js"`)
+        console.log(`import ${toCamelCase(each.name)} from "https://deno.land/x/common_tree_sitter_languages@1.3.0.0/main/${each.name}.js"`)
     }
 }
 
