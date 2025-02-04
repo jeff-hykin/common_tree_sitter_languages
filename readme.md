@@ -42,9 +42,21 @@ import treeSitterQuery from "https://github.com/jeff-hykin/common_tree_sitter_la
 
 - If they've got a tree sitter repo, go there
 - `npm install tree-sitter-cli`
-- then one of these (depending on how old your installation is)
+- then one of these (depending on how old your/their installation is)
     - `npx tree-sitter build-wasm`
     - `npx tree-sitter-cli build-wasm`
     - `npx tree-sitter-cli build --wasm`
     - `tree-sitter build --wasm --output 'out.wasm'`
-- thats generally it!
+- thats the main step! there should now be a .wasm file somewhere in that project
+- last kinda-optinal step:
+    - if you're making a CLI tool, a web tool, or a library for others to use, you probably want the wasm file to be bundle-able
+        - a quick way to do that is:
+            - clone this repo
+            - dump the .wasm file in main/
+            - then type `run/generate` (on windows, mac, linux) in your terminal/console
+            - it will generate a `yourLanguage.js` file, which is bundle-able, and contains all the data of the wasm file
+        - a more proper way to automate this in your own project is to use [binaryify](https://github.com/jeff-hykin/binaryify)
+            - there's a CLI version and a deno-api for it
+            - all it does is convert files to a bundle-able form
+    - else (if you're not making a CLI tool, web tool, or a library)
+        - just use the .wasm file directly with tree-sitter-web
