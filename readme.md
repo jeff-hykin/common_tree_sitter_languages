@@ -5,7 +5,7 @@ Its a central place for tree sitter wasm files that can be imported synchonously
 # How do I use it?
 
 ```js
-import javascript from "https://esm.sh/gh/jeff-hykin/common_tree_sitter_languages@1.3.2.0/main/javascript.js"
+import javascript from "https://esm.sh/gh/jeff-hykin/common_tree_sitter_languages@1.3.3.0/main/javascript.js"
 import { createParser } from "https://deno.land/x/deno_tree_sitter@1.0.1.0/main/main.js"
 
 const javascriptParser = await createParser(javascript)
@@ -15,24 +15,24 @@ javascriptParser.parse("let a = 10;")
 # What languages are supported?
 
 ```js
-import html from "https://esm.sh/gh/jeff-hykin/common_tree_sitter_languages@1.3.2.0/main/html.js"
-import c from "https://esm.sh/gh/jeff-hykin/common_tree_sitter_languages@1.3.2.0/main/c.js"
-import python from "https://esm.sh/gh/jeff-hykin/common_tree_sitter_languages@1.3.2.0/main/python.js"
-import bash from "https://esm.sh/gh/jeff-hykin/common_tree_sitter_languages@1.3.2.0/main/bash.js"
-import typescript from "https://esm.sh/gh/jeff-hykin/common_tree_sitter_languages@1.3.2.0/main/typescript.js"
-import yaml from "https://esm.sh/gh/jeff-hykin/common_tree_sitter_languages@1.3.2.0/main/yaml.js"
-import javascript from "https://esm.sh/gh/jeff-hykin/common_tree_sitter_languages@1.3.2.0/main/javascript.js"
-import rust from "https://esm.sh/gh/jeff-hykin/common_tree_sitter_languages@1.3.2.0/main/rust.js"
-import css from "https://esm.sh/gh/jeff-hykin/common_tree_sitter_languages@1.3.2.0/main/css.js"
-import json from "https://esm.sh/gh/jeff-hykin/common_tree_sitter_languages@1.3.2.0/main/json.js"
-import wat from "https://esm.sh/gh/jeff-hykin/common_tree_sitter_languages@1.3.2.0/main/wat.js"
-import wast from "https://esm.sh/gh/jeff-hykin/common_tree_sitter_languages@1.3.2.0/main/wast.js"
-import tsx from "https://esm.sh/gh/jeff-hykin/common_tree_sitter_languages@1.3.2.0/main/tsx.js"
-import toml from "https://esm.sh/gh/jeff-hykin/common_tree_sitter_languages@1.3.2.0/main/toml.js"
-import nix from "https://esm.sh/gh/jeff-hykin/common_tree_sitter_languages@1.3.2.0/main/nix.js"
-import cpp from "https://esm.sh/gh/jeff-hykin/common_tree_sitter_languages@1.3.2.0/main/cpp.js"
-import gitignore from "https://esm.sh/gh/jeff-hykin/common_tree_sitter_languages@1.3.2.0/main/gitignore.js"
-import treeSitterQuery from "https://esm.sh/gh/jeff-hykin/common_tree_sitter_languages@1.3.2.0/main/tree-sitter-query.js"
+import html from "https://esm.sh/gh/jeff-hykin/common_tree_sitter_languages@1.3.3.0/main/html.js"
+import c from "https://esm.sh/gh/jeff-hykin/common_tree_sitter_languages@1.3.3.0/main/c.js"
+import python from "https://esm.sh/gh/jeff-hykin/common_tree_sitter_languages@1.3.3.0/main/python.js"
+import bash from "https://esm.sh/gh/jeff-hykin/common_tree_sitter_languages@1.3.3.0/main/bash.js"
+import typescript from "https://esm.sh/gh/jeff-hykin/common_tree_sitter_languages@1.3.3.0/main/typescript.js"
+import yaml from "https://esm.sh/gh/jeff-hykin/common_tree_sitter_languages@1.3.3.0/main/yaml.js"
+import javascript from "https://esm.sh/gh/jeff-hykin/common_tree_sitter_languages@1.3.3.0/main/javascript.js"
+import rust from "https://esm.sh/gh/jeff-hykin/common_tree_sitter_languages@1.3.3.0/main/rust.js"
+import css from "https://esm.sh/gh/jeff-hykin/common_tree_sitter_languages@1.3.3.0/main/css.js"
+import json from "https://esm.sh/gh/jeff-hykin/common_tree_sitter_languages@1.3.3.0/main/json.js"
+import wat from "https://esm.sh/gh/jeff-hykin/common_tree_sitter_languages@1.3.3.0/main/wat.js"
+import wast from "https://esm.sh/gh/jeff-hykin/common_tree_sitter_languages@1.3.3.0/main/wast.js"
+import tsx from "https://esm.sh/gh/jeff-hykin/common_tree_sitter_languages@1.3.3.0/main/tsx.js"
+import toml from "https://esm.sh/gh/jeff-hykin/common_tree_sitter_languages@1.3.3.0/main/toml.js"
+import nix from "https://esm.sh/gh/jeff-hykin/common_tree_sitter_languages@1.3.3.0/main/nix.js"
+import cpp from "https://esm.sh/gh/jeff-hykin/common_tree_sitter_languages@1.3.3.0/main/cpp.js"
+import gitignore from "https://esm.sh/gh/jeff-hykin/common_tree_sitter_languages@1.3.3.0/main/gitignore.js"
+import treeSitterQuery from "https://esm.sh/gh/jeff-hykin/common_tree_sitter_languages@1.3.3.0/main/tree-sitter-query.js"
 ```
 
 ### How to add a new language
